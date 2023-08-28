@@ -18,6 +18,16 @@ app.post('/connect/:ip', (req, res) => {
   }
 })
 
+app.post('/disconnect/:ip', (req, res) => {
+  try {
+    cp.exec(`adb disconnect ${req.params.ip}`)
+    res.send()
+  }
+  catch (ex) {
+    res.errored(ex)
+  }
+})
+
 app.post('/command', jsonparser, (req, res) => {
   try {
     cp.exec(`adb -s ${req.body.device} ${req.body.command}`)

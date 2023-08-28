@@ -19,6 +19,9 @@ The command being executed is `adb -s {device} {command}`
 
 ## Usage
 I suggest you use the docker image:
-`https://hub.docker.com/sutt/`
+`thesutt/adbrelay:latest`
+
+Or check it out on [hub.docker.com](https://hub.docker.com/repository/docker/thesutt/adbrelay)
+
 
 You can of course start it as a stand-alone application using `npm start`.
