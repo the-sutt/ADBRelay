@@ -1,6 +1,6 @@
 {
   "name": "adbrelay",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "NodeJS server to relay commands to local adb-install.",
   "main": "index.js",
   "scripts": {
