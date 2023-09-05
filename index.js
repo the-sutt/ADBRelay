@@ -34,6 +34,7 @@ app.post('/disconnect/:ip', (req, res) => {
 
 app.post('/command', jsonparser, (req, res) => {
   try {
+    console.log('incoming req',req)
     const cmd = `adb -s ${req.body.device} ${req.body.command}`
     console.log('executing command',cmd)
     const ret = cp.execSync(cmd)
